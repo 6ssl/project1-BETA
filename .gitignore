@@ -1,0 +1,7 @@
+# OneDrive
+$RECYCLE.BIN/
+Desktop.ini/
+
+# OS
+.DS_Store
+Thumbs.db
