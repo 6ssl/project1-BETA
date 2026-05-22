@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoshi game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
+    <nav class="menu">
+        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open">
+        <label class="menu-open-button" for="menu-open">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+        </label>
+
+        <a href="#" class="menu-item"><i class="fa fa-bar-chart"></i></a>
+        <a href="#" class="menu-item"><i class="fa fa-plus"></i></a>
+        <a href="#" class="menu-item"><i class="fa fa-heart"></i></a>
+        <a href="#" class="menu-item"><i class="fa fa-envelope"></i></a>
+    </nav>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo-filters" aria-hidden="true">
+        <defs>
+            <filter id="shadowed-goo">
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+                <feGaussianBlur in="goo" stdDeviation="3" result="shadow"></feGaussianBlur>
+                <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow"></feColorMatrix>
+                <feOffset in="shadow" dx="1" dy="1" result="shadow"></feOffset>
+                <feComposite in2="shadow" in="goo" result="goo"></feComposite>
+                <feComposite in2="goo" in="SourceGraphic" result="mix"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+
     <p>welkom bij mijn game website</p>
     <p>floep floep</p>
     <a href="#"
