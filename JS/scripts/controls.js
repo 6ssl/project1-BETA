@@ -1,7 +1,7 @@
 var controls = {
-    up: Key("W", 87),
+    up: Key("Z", 90),
     down: Key("S", 83),
-    left: Key("A", 65),
+    left: Key("Q", 81),
     right: Key("D", 68)
 };
 
