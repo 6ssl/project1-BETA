@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoshi Platformer</title>
+    <title>Vind de knop</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/game.css">
@@ -40,12 +40,9 @@
         </defs>
     </svg>
 
-    <canvas id="game-canvas"></canvas>
-    <p class="game-hud">Z/Q/D bewegen · Z springen · ontwijk de rode vijand</p>
+    <p class="game-hud" id="game-message">Vind de onzichtbare knop</p>
+    <button type="button" id="hidden-btn" class="hidden-btn" aria-label="Geheime knop"></button>
 
-    <script src="../JS/scripts/physics.js"></script>
-    <script src="../JS/scripts/gameobject.js"></script>
-    <script src="../JS/scripts/controls.js"></script>
-    <script src="../JS/scripts/main.js"></script>
+    <script src="../JS/scripts/find-button.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # Yoshi game website
 
-Een eenvoudige game-website met een landingspagina en een canvas-platformspel met Yoshi.
+Een eenvoudige game-website met een landingspagina en een "vind de knop"-spel.
 
 ## Live website (GitHub Pages)
 
@@ -13,14 +13,7 @@ De site staat online via GitHub Pages:
 
 ## Spel
 
-In het platformspel bestuur je Yoshi, spring je over obstakels en ontwijk je de rode vijand.
-
-| Toets | Actie   |
-|-------|---------|
-| Q     | Links   |
-| D     | Rechts  |
-| Z     | Omhoog / springen |
-| S     | Omlaag  |
+Zoek de onzichtbare knop ergens op het scherm. Als je hem vindt, verplaatst hij zich naar een nieuwe plek.
 
 ## Lokaal draaien
 
@@ -38,20 +31,16 @@ Ga daarna naar `http://localhost:8000`.
 ```
 ├── index.html          # Landingspagina
 ├── HTML/
-│   └── game.html       # Yoshi-platformspel
+│   └── game.html       # Vind-de-knop spel
 ├── CSS/
 │   ├── styles.css      # Algemene stijlen en navigatie
 │   └── game.css        # Spelpagina
 └── JS/
     └── scripts/
-        ├── main.js         # Spelloop en rendering
-        ├── gameobject.js   # Spelobjecten
-        ├── physics.js      # Fysica en botsingen
-        └── controls.js     # Toetsenbordinput
+        └── find-button.js
 ```
 
 ## Technologie
 
-- HTML5 Canvas
 - Vanilla JavaScript (geen frameworks)
 - CSS voor layout en animaties
