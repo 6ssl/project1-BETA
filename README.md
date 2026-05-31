@@ -4,7 +4,7 @@ Een webontwikkelingproject gebouwd met HTML, CSS en JavaScript.
 
 ## Overzicht
 
-Dit repository bevat een webapplicatie met focus op frontend-technologieën.
+deze repository bevat een webapplicatie met focus op frontend-technologieën.
 
 ## Technologie Stack
 
@@ -14,7 +14,9 @@ Dit repository bevat een webapplicatie met focus op frontend-technologieën.
 
 ## Aan de slag
 
-Om aan de slag te gaan met dit project, kloon het repository en open de bestanden in uw webbrowser.
+surf naar https://6ssl.github.io/project1-BETA/index.html
+
+of kloon de repository en open de bestanden in uw webbrowser.
 
 ```bash
 git clone https://github.com/6ssl/project1-BETA.git
