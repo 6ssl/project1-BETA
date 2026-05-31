@@ -1,6 +1,20 @@
+const luigiButton = document.querySelector('.button-with-icon.luigi');
+if (luigiButton) {
+  luigiButton.addEventListener('click', () => {
+    location.href = 'https://jellie12.github.io/Project-Web-Dev-2026/';
+  });
+}
+
 const playButton = document.querySelector('.center-area .button-with-icon');
 if (playButton) {
   playButton.addEventListener('click', () => {
     location.href = 'HTML/game.html';
+  });
+}
+
+const aboutButton = document.querySelector('.button-with-icon.mario');
+if (aboutButton) {
+  aboutButton.addEventListener('click', () => {
+    location.href = 'https://www.allworship.com/wp-content/uploads/2023/08/bigstock-Under-Construction-Industrial-352850024-768x346.jpg';
   });
 }
