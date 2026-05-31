@@ -1,46 +1,38 @@
-# Yoshi game website
+# Project1-BETA
 
-Een eenvoudige game-website met een landingspagina en een "vind de knop"-spel.
+Een webontwikkelingproject gebouwd met HTML, CSS en JavaScript.
 
-## Live website (GitHub Pages)
+## Overzicht
 
-De site staat online via GitHub Pages:
+deze repository bevat een webapplicatie met focus op frontend-technologieën.
 
-**[https://6ssl.github.io/project1-BETA/index.html](https://6ssl.github.io/project1-BETA/index.html)**
+## Technologie Stack
 
-- **Home:** [index.html](https://6ssl.github.io/project1-BETA/index.html)
-- **Spel:** [HTML/game.html](https://6ssl.github.io/project1-BETA/HTML/game.html)
+- **CSS**: 54% - Styling en lay-out
+- **HTML**: 38,1% - Structuur en opmaak
+- **JavaScript**: 7,9% - Interactiviteit en functionaliteit
 
-## Spel
+## Aan de slag
 
-Zoek de onzichtbare knop ergens op het scherm. Als je hem vindt, verplaatst hij zich naar een nieuwe plek.
+surf naar https://6ssl.github.io/project1-BETA/index.html
 
-## Lokaal draaien
-
-Clone de repository en open `index.html` in je browser, of start een lokale webserver:
+of kloon de repository en open de bestanden in uw webbrowser.
 
 ```bash
-# Voorbeeld met Python
-python -m http.server 8000
+git clone https://github.com/6ssl/project1-BETA.git
+cd project1-BETA
 ```
 
-Ga daarna naar `http://localhost:8000`.
+## Functies
 
-## Projectstructuur
+- Responsief ontwerp met CSS
+- Interactieve functionaliteit met JavaScript
+- Schone en semantische HTML-structuur
 
-```
-├── index.html          # Landingspagina
-├── HTML/
-│   └── game.html       # Vind-de-knop spel
-├── CSS/
-│   ├── styles.css      # Algemene stijlen en navigatie
-│   └── game.css        # Spelpagina
-└── JS/
-    └── scripts/
-        └── find-button.js
-```
+## Licentie
 
-## Technologie
+Voeg hier uw licentie-informatie toe.
 
-- Vanilla JavaScript (geen frameworks)
-- CSS voor layout en animaties
+## Bijdragen
+
+Bijdragen zijn welkom! Voel je vrij om een Pull Request in te dienen.
