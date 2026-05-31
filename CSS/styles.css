@@ -1,227 +1,104 @@
-html,
 body {
-  margin: 0;
-  height: 100%;
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('https://wallpapercave.com/wp/wp2911885.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  position: relative;
-  background-image: url("https://i.imgur.com/9r4NGUu.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  align-items: center;
-  justify-content: center;
+.button-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.btn-flip {
-  opacity: 1;
-  outline: 0;
-  color: #fff;
-  line-height: 40px;
-  position: relative;
-  text-align: center;
-  letter-spacing: 1px;
-  display: inline-block;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
+.center-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.btn-flip:hover::after {
-  opacity: 1;
-  transform: translateY(0) rotateX(0);
+.button-with-icon {
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0f988e;
+    font-family: "Istok Web", sans-serif;
+    letter-spacing: 1px;
+    padding: 0 12px;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 3px;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    transform: translateY(0px);
+    position: relative;
+    box-shadow:
+        inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+        inset 0 1px 20px rgba(0, 0, 0, 0),
+        0 3px 0 #0f9838,
+        0 3px 2px rgba(0, 0, 0, 0.2),
+        0 5px 10px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    background: #00ff1a;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    transition: 150ms all ease-in-out;
 }
 
-.btn-flip:hover::before {
-  opacity: 0;
-  transform: translateY(50%) rotateX(90deg);
+.button-with-icon .icon {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.5s ease-in-out;
 }
 
-.btn-flip::after {
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 100%;
-  color: #323237;
-  display: block;
-  transition: 0.5s;
-  position: absolute;
-  background: #adadaf;
-  content: attr(data-back);
-  transform: translateY(-50%) rotateX(90deg);
+.button-with-icon:active {
+    transform: translateY(3px);
+    box-shadow:
+        inset 0 16px 2px -15px rgba(0, 0, 0, 0),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+        inset 0 1px 20px rgba(0, 0, 0, 0.1),
+        0 0 0 #00ff26,
+        0 0 0 2px rgba(255, 255, 255, 0.5),
+        0 0 0 rgba(0, 0, 0, 0),
+        0 0 0 rgba(0, 0, 0, 0);
 }
 
-.btn-flip::before {
-  top: 0;
-  left: 0;
-  opacity: 1;
-  color: #adadaf;
-  display: block;
-  padding: 0 30px;
-  line-height: 40px;
-  transition: 0.5s;
-  position: relative;
-  background: #323237;
-  content: attr(data-front);
-  transform: translateY(0) rotateX(0);
+.button-with-icon:hover .text {
+    transform: translateX(80px);
 }
 
-/* Gooey menu */
-.goo-filters {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
+.button-with-icon:hover .icon {
+    transform: translate(23px);
 }
 
-.menu-open {
-  display: none;
+.text {
+    transition: all 0.5s ease-in-out;
 }
 
-.menu-item,
-.menu-open-button {
-  background: #ffc107;
-  border-radius: 100%;
-  width: 80px;
-  height: 80px;
-  margin-left: -40px;
-  position: absolute;
-  top: 0;
-  color: white;
-  text-align: center;
-  line-height: 80px;
-  transform: translate3d(0, 0, 0);
-  transition: transform ease-out 200ms;
-  text-decoration: none;
+.mario {
+    background: #d32f2f;
+    border-color: #b71c1c;
 }
 
-.menu {
-  filter: url("#shadowed-goo");
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  margin-left: -40px;
-  padding-top: 0;
-  padding-left: 80px;
-  width: 650px;
-  height: 80px;
-  box-sizing: border-box;
-  font-size: 20px;
-  text-align: left;
-  z-index: 100;
-}
-
-.hamburger {
-  width: 25px;
-  height: 3px;
-  background: white;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -12.5px;
-  margin-top: -1.5px;
-  transition: transform 200ms;
-}
-
-.hamburger-1 {
-  transform: translate3d(0, -8px, 0);
-}
-
-.hamburger-2 {
-  transform: translate3d(0, 0, 0);
-}
-
-.hamburger-3 {
-  transform: translate3d(0, 8px, 0);
-}
-
-.menu-open:checked + .menu-open-button .hamburger-1 {
-  transform: translate3d(0, 0, 0) rotate(45deg);
-}
-
-.menu-open:checked + .menu-open-button .hamburger-2 {
-  transform: translate3d(0, 0, 0) scale(0.1, 1);
-}
-
-.menu-open:checked + .menu-open-button .hamburger-3 {
-  transform: translate3d(0, 0, 0) rotate(-45deg);
-}
-
-.menu-item:hover {
-  background: white;
-  color: #ffc107;
-}
-
-.menu-icon-button {
-  background: transparent;
-  overflow: hidden;
-  padding: 0;
-  line-height: 0;
-}
-
-.menu-icon {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 100%;
-  display: block;
-  pointer-events: none;
-}
-
-.menu-icon-button:hover {
-  background: transparent;
-}
-
-.menu-item:nth-child(3) {
-  transition-duration: 180ms;
-}
-
-.menu-item:nth-child(4) {
-  transition-duration: 260ms;
-}
-
-.menu-item:nth-child(5) {
-  transition-duration: 340ms;
-}
-
-.menu-open-button {
-  z-index: 2;
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition-duration: 400ms;
-  transform: scale(1.1, 1.1) translate3d(0, 0, 0);
-  cursor: pointer;
-}
-
-.menu-open-button:hover {
-  transform: scale(1.2, 1.2) translate3d(0, 0, 0);
-}
-
-.menu-open:checked + .menu-open-button {
-  transition-timing-function: linear;
-  transition-duration: 200ms;
-  transform: scale(0.8, 0.8) translate3d(0, 0, 0);
-}
-
-.menu-open:checked ~ .menu-item {
-  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.menu-open:checked ~ .menu-item:nth-child(3) {
-  transition-duration: 170ms;
-  transform: translate3d(80px, 0, 0);
-}
-
-.menu-open:checked ~ .menu-item:nth-child(4) {
-  transition-duration: 250ms;
-  transform: translate3d(160px, 0, 0);
-}
-
-.menu-open:checked ~ .menu-item:nth-child(5) {
-  transition-duration: 330ms;
-  transform: translate3d(240px, 0, 0);
+.luigi {
+    background: #43a047;
+    border-color: #2e7d32;
 }

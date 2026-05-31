@@ -1,37 +1,99 @@
-body.page-game {
-  display: block;
-  min-height: 100vh;
-  overflow: hidden;
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('https://wallpapercave.com/wp/wp2911885.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-body.page-game .hidden-btn {
-  position: fixed;
-  z-index: 10;
-  width: 48px;
-  height: 48px;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: default;
-  opacity: 0;
+html, body {
+    height: 100%;
 }
 
-body.page-game .game-hud {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
-  text-align: center;
-  pointer-events: none;
+#score {
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
-body.page-game .menu {
-  z-index: 200;
+#clicker {
+    padding: 10px 18px;
+    font-size: 16px;
+    border: 1px solid #000;
+    background: #eee;
+    cursor: pointer;
+}
+
+.button-with-icon {
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2b8e3a;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    letter-spacing: 1px;
+    padding: 0 12px;
+    text-align: center;
+    width: 140px;
+    height: 44px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 8px;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    box-shadow:
+        inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+        inset 0 1px 20px rgba(0, 0, 0, 0),
+        0 3px 0 #2b8e3a,
+        0 3px 2px rgba(0, 0, 0, 0.2),
+        0 5px 10px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    background: #39b54a;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    transition: 150ms all ease-in-out;
+}
+
+.button-with-icon .icon {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.5s ease-in-out;
+}
+
+.button-with-icon:active {
+    transform: translateX(-50%) translateY(3px);
+    box-shadow:
+        inset 0 16px 2px -15px rgba(0, 0, 0, 0),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+        inset 0 1px 20px rgba(0, 0, 0, 0.1),
+        0 0 0 #2b8e3a,
+        0 0 0 2px rgba(255, 255, 255, 0.5),
+        0 0 0 rgba(0, 0, 0, 0),
+        0 0 0 rgba(0, 0, 0, 0);
+}
+
+.button-with-icon:hover .text {
+    transform: translateX(80px);
+}
+
+.button-with-icon:hover .icon {
+    transform: translate(23px);
+}
+
+.text {
+    transition: all 0.5s ease-in-out;
 }

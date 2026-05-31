@@ -1,48 +1,31 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vind de knop</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../CSS/styles.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../CSS/game.css">
 </head>
-<body class="page-game">
-    <nav class="menu">
-        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open">
-        <label class="menu-open-button" for="menu-open">
-            <span class="hamburger hamburger-1"></span>
-            <span class="hamburger hamburger-2"></span>
-            <span class="hamburger hamburger-3"></span>
-        </label>
+<body>
+	<button class="button-with-icon" aria-label="Terug">
+	  <svg
+		class="icon"
+		id="Play"
+		viewBox="0 0 48 48"
+		xmlns="http://www.w3.org/2000/svg"
+	  >
+		<path
+			class="color000000 svgShape"
+			fill="#ffffff"
+			d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z"
+		  ></path>
+	  </svg>
+	  <span class="text">terug</span>
+	</button>
+	<main class="card" role="main">
+		<div id="score">Score: 0</div>
+		<button id="clicker" aria-label="Klik hier om punten te verdienen">Klik</button>
+	</main>
 
-        <a href="game.html" class="menu-item menu-icon-button" title="Spel">
-            <img src="https://jellie12.github.io/Super_luigi2/MEDIA/yoshi.jpg" alt="Yoshi" class="menu-icon">
-        </a>
-        <a href="https://jellie12.github.io/Super_luigi2/HTML/index.html" class="menu-item menu-icon-button" title="Super Luigi">
-            <img src="https://jellie12.github.io/Super_luigi2/MEDIA/Luigi.jpg" alt="Luigi" class="menu-icon">
-        </a>
-        <a href="../index.html" class="menu-item" title="Home"><i class="fa fa-home"></i></a>
-    </nav>
-
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo-filters" aria-hidden="true">
-        <defs>
-            <filter id="shadowed-goo">
-                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
-                <feGaussianBlur in="goo" stdDeviation="3" result="shadow"></feGaussianBlur>
-                <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow"></feColorMatrix>
-                <feOffset in="shadow" dx="1" dy="1" result="shadow"></feOffset>
-                <feComposite in2="shadow" in="goo" result="goo"></feComposite>
-                <feComposite in2="goo" in="SourceGraphic" result="mix"></feComposite>
-            </filter>
-        </defs>
-    </svg>
-
-    <p class="game-hud" id="game-message">Vind de onzichtbare knop</p>
-    <button type="button" id="hidden-btn" class="hidden-btn" aria-label="Geheime knop"></button>
-
-    <script src="../JS/scripts/find-button.js"></script>
+	<script src="../JS/game.js"></script>
 </body>
 </html>
