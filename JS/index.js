@@ -11,3 +11,10 @@ if (playButton) {
     location.href = 'HTML/game.html';
   });
 }
+
+const marioButton = document.querySelector('.button-with-icon.mario');
+if (marioButton) {
+  marioButton.addEventListener('click', () => {
+    location.href = 'https://walter-white-the-creator.github.io/jasper/';
+  });
+}
