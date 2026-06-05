@@ -6,12 +6,6 @@ Een webontwikkelingproject gebouwd met HTML, CSS en JavaScript.
 
 deze repository bevat een webapplicatie met focus op frontend-technologieën.
 
-## Technologie Stack
-
-- **CSS**: 54% - Styling en lay-out
-- **HTML**: 38,1% - Structuur en opmaak
-- **JavaScript**: 7,9% - Interactiviteit en functionaliteit
-
 ## Aan de slag
 
 surf naar https://6ssl.github.io/project1-BETA/index.html
