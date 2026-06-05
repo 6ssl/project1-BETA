@@ -98,6 +98,23 @@ body {
     border-color: #b71c1c;
 }
 
+.yoshi-header {
+    width: 100%;
+    background: linear-gradient(135deg, #00ff1a 0%, #00dd00 100%);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.yoshi-footer {
+    width: 100%;
+    background: linear-gradient(135deg, #00dd00 0%, #00ff1a 100%);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
 .luigi {
     background: #43a047;
     border-color: #2e7d32;
