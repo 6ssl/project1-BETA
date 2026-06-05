@@ -100,18 +100,24 @@ body {
 
 .yoshi-header {
     width: 100%;
-    background: linear-gradient(135deg, #00ff1a 0%, #00dd00 100%);
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.yoshi-header h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 32px;
+    letter-spacing: 2px;
 }
 
 .yoshi-footer {
     width: 100%;
-    background: linear-gradient(135deg, #00dd00 0%, #00ff1a 100%);
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     margin-top: auto;
 }
 
