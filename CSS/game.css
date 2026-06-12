@@ -1,27 +1,21 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background-image: url('https://wallpapercave.com/wp/wp2911885.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('https://wallpapercave.com/wp/wp2911885.jpg') center / cover no-repeat;
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    box-sizing: border-box;
 }
 
 .game-header {
-    width: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     gap: 16px;
-    padding: 16px 20px;
-    box-sizing: border-box;
-    position: relative;
+    padding: 12px;
+    padding-top: 60px;
 }
 
 .game-area {
@@ -30,25 +24,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-}
-
-#score {
-    font-size: 20px;
-    margin-bottom: 12px;
-}
-
-#clicker {
-    padding: 10px 18px;
-    font-size: 16px;
-    border: 1px solid #000;
-    background: #eee;
-    cursor: pointer;
+    padding: 16px 12px;
 }
 
 .game-nav {
@@ -56,79 +32,63 @@ html, body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    flex: 1;
-}
-
-.game-nav .button-with-icon {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
+    gap: 10px;
+    width: 100%;
 }
 
 .back-button {
     position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
 }
 
 .button-with-icon {
+    --btn-accent: #2b8e3a;
     overflow: hidden;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #2b8e3a;
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-    letter-spacing: 1px;
-    padding: 0 12px;
-    text-align: center;
-    width: 140px;
+    width: 100%;
+    max-width: 280px;
     height: 44px;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 600;
+    padding: 0 12px;
+    border: 1px solid var(--btn-accent);
     border-radius: 8px;
-    outline: none;
-    user-select: none;
-    cursor: pointer;
+    background: #39b54a;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: 150ms ease-in-out;
     box-shadow:
         inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
         inset 0 0 0 1px rgba(255, 255, 255, 0.3),
-        inset 0 1px 20px rgba(0, 0, 0, 0),
-        0 3px 0 #2b8e3a,
+        0 3px 0 var(--btn-accent),
         0 3px 2px rgba(0, 0, 0, 0.2),
-        0 5px 10px rgba(0, 0, 0, 0.1),
-        0 10px 20px rgba(0, 0, 0, 0.1);
-    background: #39b54a;
-    color: white;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-    transition: 150ms all ease-in-out;
+        0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .button-with-icon .icon {
+    width: 22px;
+    height: 22px;
     margin-right: 8px;
-    width: 24px;
-    height: 24px;
-    transition: all 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+
+.back-button:active,
+.button-with-icon:active {
+    transform: translateY(3px);
 }
 
 .back-button:active {
-    transform: translateY(calc(-50% + 3px));
-}
-
-.button-with-icon:active {
-    transform: translateY(3px);
-    box-shadow:
-        inset 0 16px 2px -15px rgba(0, 0, 0, 0),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.15),
-        inset 0 1px 20px rgba(0, 0, 0, 0.1),
-        0 0 0 #2b8e3a,
-        0 0 0 2px rgba(255, 255, 255, 0.5),
-        0 0 0 rgba(0, 0, 0, 0),
-        0 0 0 rgba(0, 0, 0, 0);
+    transform: translateX(-50%) translateY(3px);
 }
 
 .button-with-icon:hover .text {
@@ -136,96 +96,91 @@ html, body {
 }
 
 .button-with-icon:hover .icon {
-    transform: translate(23px);
+    transform: translateX(23px);
 }
 
 .text {
-    transition: all 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .mario {
+    --btn-accent: #b71c1c;
     background: #d32f2f;
-    border-color: #b71c1c;
-    box-shadow:
-        inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.3),
-        inset 0 1px 20px rgba(0, 0, 0, 0),
-        0 3px 0 #b71c1c,
-        0 3px 2px rgba(0, 0, 0, 0.2),
-        0 5px 10px rgba(0, 0, 0, 0.1),
-        0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .luigi,
 .tugra {
+    --btn-accent: #2e7d32;
     background: #43a047;
-    border-color: #2e7d32;
-    box-shadow:
-        inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.3),
-        inset 0 1px 20px rgba(0, 0, 0, 0),
-        0 3px 0 #2e7d32,
-        0 3px 2px rgba(0, 0, 0, 0.2),
-        0 5px 10px rgba(0, 0, 0, 0.1),
-        0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.yoshi {
+.alisabutton {
+    --btn-accent: #0f9838;
     background: #00ff1a;
-    border-color: #0f9838;
-    box-shadow:
-        inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.3),
-        inset 0 1px 20px rgba(0, 0, 0, 0),
-        0 3px 0 #0f9838,
-        0 3px 2px rgba(0, 0, 0, 0.2),
-        0 5px 10px rgba(0, 0, 0, 0.1),
-        0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card {
+    width: min(100%, 360px);
+    padding: 20px 24px;
+    border-radius: 12px;
     text-align: center;
     background: rgba(68, 255, 102, 0.9);
-    padding: 24px 32px;
-    border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-    .game-header {
-        flex-direction: column;
-        padding: 12px;
-        padding-top: 60px;
-    }
-
-    .back-button {
-        position: absolute;
-        left: 50%;
-        top: 12px;
-        transform: translateX(-50%);
-    }
-
-    .back-button:active {
-        transform: translateX(-50%) translateY(3px);
-    }
-
-    .game-nav {
-        width: 100%;
-    }
-
-    .game-nav .button-with-icon {
-        width: 100%;
-        max-width: 280px;
-    }
+#score {
+    margin-bottom: 12px;
+    font-size: clamp(18px, 4vw, 22px);
 }
 
 #clicker {
+    padding: 10px 18px;
+    border: 1px solid #000;
     background: #88ff51;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .game-footer {
-    text-align: center;
     padding: 12px;
-    font-size: 26px;
+    text-align: center;
+    font-size: clamp(16px, 4vw, 26px);
     color: #ff00e6;
+}
+
+@media (min-width: 768px) {
+    .game-header {
+        flex-direction: row;
+        padding: 16px 20px;
+        padding-top: 16px;
+    }
+
+    .back-button {
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .back-button:active {
+        transform: translateY(calc(-50% + 3px));
+    }
+
+    .game-nav {
+        flex: 1;
+        width: auto;
+        gap: 12px;
+    }
+
+    .game-nav .button-with-icon {
+        width: 140px;
+        max-width: none;
+    }
+
+    .game-area {
+        padding: 20px;
+    }
+
+    .card {
+        padding: 24px 32px;
+    }
 }
