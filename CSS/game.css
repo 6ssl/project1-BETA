@@ -8,9 +8,30 @@ body {
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.game-header {
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 16px;
+    padding: 16px 20px;
+    box-sizing: border-box;
     position: relative;
+}
+
+.game-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -28,6 +49,29 @@ html, body {
     border: 1px solid #000;
     background: #eee;
     cursor: pointer;
+}
+
+.game-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.game-nav .button-with-icon {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .button-with-icon {
@@ -49,10 +93,7 @@ html, body {
     outline: none;
     user-select: none;
     cursor: pointer;
-    transform: translateX(-50%);
-    position: absolute;
-    top: 20px;
-    left: 50%;
+    text-decoration: none;
     box-shadow:
         inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
         inset 0 0 0 1px rgba(255, 255, 255, 0.3),
@@ -74,8 +115,12 @@ html, body {
     transition: all 0.5s ease-in-out;
 }
 
+.back-button:active {
+    transform: translateY(calc(-50% + 3px));
+}
+
 .button-with-icon:active {
-    transform: translateX(-50%) translateY(3px);
+    transform: translateY(3px);
     box-shadow:
         inset 0 16px 2px -15px rgba(0, 0, 0, 0),
         inset 0 0 0 1px rgba(255, 255, 255, 0.15),
@@ -96,4 +141,91 @@ html, body {
 
 .text {
     transition: all 0.5s ease-in-out;
+}
+
+.mario {
+    background: #d32f2f;
+    border-color: #b71c1c;
+    box-shadow:
+        inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+        inset 0 1px 20px rgba(0, 0, 0, 0),
+        0 3px 0 #b71c1c,
+        0 3px 2px rgba(0, 0, 0, 0.2),
+        0 5px 10px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.luigi,
+.tugra {
+    background: #43a047;
+    border-color: #2e7d32;
+    box-shadow:
+        inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+        inset 0 1px 20px rgba(0, 0, 0, 0),
+        0 3px 0 #2e7d32,
+        0 3px 2px rgba(0, 0, 0, 0.2),
+        0 5px 10px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.yoshi {
+    background: #00ff1a;
+    border-color: #0f9838;
+    box-shadow:
+        inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+        inset 0 1px 20px rgba(0, 0, 0, 0),
+        0 3px 0 #0f9838,
+        0 3px 2px rgba(0, 0, 0, 0.2),
+        0 5px 10px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    text-align: center;
+    background: rgba(68, 255, 102, 0.9);
+    padding: 24px 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .game-header {
+        flex-direction: column;
+        padding: 12px;
+        padding-top: 60px;
+    }
+
+    .back-button {
+        position: absolute;
+        left: 50%;
+        top: 12px;
+        transform: translateX(-50%);
+    }
+
+    .back-button:active {
+        transform: translateX(-50%) translateY(3px);
+    }
+
+    .game-nav {
+        width: 100%;
+    }
+
+    .game-nav .button-with-icon {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+#clicker {
+    background: #88ff51;
+}
+
+.game-footer {
+    text-align: center;
+    padding: 12px;
+    font-size: 26px;
+    color: #ff00e6;
 }
